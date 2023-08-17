@@ -12,8 +12,8 @@ const Navbar = () => {
   ]
 
   return (
-    <>
-      <nav className="h-16 md:h-28 w-full flex items-center justify-between px-12 md:px-22 bg-white drop-shadow-md relative">
+    <div className="relative">
+      <nav className="h-16 md:h-28 w-full flex items-center justify-between px-12 md:px-22 bg-white drop-shadow-md  fixed">
         <Link to="/">
           <img
             className="h-12 w-16"
@@ -73,7 +73,7 @@ const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="flex flex-col h-screen w-1/2 bg-slate-100 drop-shadow-sm gap-3 pl-12 pt-4 z-10 absolute">
+        <div className="flex flex-col h-screen w-1/2 bg-slate-100 drop-shadow-sm gap-3 pl-12 pt-4 z-10 absolute top-16">
           {links.map((link) => (
             <Link
               key={link.link}
@@ -86,7 +86,7 @@ const Navbar = () => {
           ))}
         </div>
       )}
-    </>
+    </div>
   )
 }
 
