@@ -73,7 +73,7 @@ const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="flex flex-col h-screen w-1/3 bg-slate-100 drop-shadow-sm gap-3 px-2 pt-2 z-10">
+        <div className="flex flex-col h-screen w-1/3 bg-slate-100 drop-shadow-sm gap-3 pl-12 pt-4 z-10 absolute">
           {links.map((link) => (
             <Link
               key={link.link}
