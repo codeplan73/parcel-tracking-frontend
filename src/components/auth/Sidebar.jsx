@@ -9,34 +9,34 @@ import {
 
 const Sidebar = () => {
   return (
-    <aside className="hidden col-span-1 bg-white h-screen shadow-xl px-4 py-4 pt-6  md:flex flex-col gap-4 rounded-lg">
+    <aside className="hidden col-span-1 bg-white h-[75vh] shadow-xl px-4 py-4 pt-6  md:flex flex-col gap-4 rounded-lg">
       <Link
         to="/auth/dashboard"
-        className="w-full py-1 px-2 rounded flex items-center gap-2 text-xl hover:text-red-500 font-mono hover:bg-slate-200"
+        className="w-full py-1 px-2 rounded flex items-center gap-2 text-lg hover:text-white font-mono hover:bg-slate-900"
       >
         <BiSolidTachometer /> Dashboard
       </Link>
       <Link
         to="/auth/create-parce"
-        className="w-full py-1 px-2 rounded flex items-center gap-2 text-xl hover:text-red-500 font-mono hover:bg-slate-200"
+        className="w-full py-1 px-2 rounded flex items-center gap-2 text-lg hover:text-white font-mono hover:bg-slate-900"
       >
         <MdCreate /> Create Parcel
       </Link>
       <Link
         to="/auth/profile"
-        className="w-full py-1 px-2 rounded flex items-center gap-2 text-xl hover:text-red-500 font-mono hover:bg-slate-200"
+        className="w-full py-1 px-2 rounded flex items-center gap-2 text-lg hover:text-white font-mono hover:bg-slate-900"
       >
         <AiOutlineUserAdd /> Profile
       </Link>
       <Link
         to="/auth/profile"
-        className="w-full py-1 px-2 rounded flex items-center gap-2 text-xl hover:text-red-500 font-mono hover:bg-slate-200"
+        className="w-full py-1 px-2 rounded flex items-center gap-2 text-lg hover:text-white font-mono hover:bg-slate-900"
       >
         <AiFillSetting /> Settings
       </Link>
       <Link
         onClick={() => {}}
-        className="w-full py-1 px-2 rounded flex items-center gap-2 text-xl hover:text-red-500 font-mono hover:bg-slate-200"
+        className="w-full py-1 px-2 rounded flex items-center gap-2 text-lg hover:text-white font-mono hover:bg-slate-900"
       >
         <AiOutlineLogout /> Logout
       </Link>
