@@ -6,8 +6,8 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <Notification />
       <div className="main">
+        <Notification />
         <Outlet />
       </div>
       <Footer />

@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="h-16 md:h-28 w-full flex items-center justify-between px-12 md:px-22 bg-white drop-shadow-md  fixed">
+      <nav className="h-16 md:h-28 w-full flex items-center justify-between px-12 md:px-22 bg-white drop-shadow-md">
         <Link to="/">
           <img
             className="h-12 w-16"

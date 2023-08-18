@@ -1,8 +1,14 @@
+import { BsGlobe, BsCart4 } from 'react-icons/bs'
+import { MdOutlineEventNote } from 'react-icons/md'
+import { AiFillApple, AiFillAndroid } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+
 import Card from './../components/Homepage/Card'
+import appScreen from '../assets/gig-app-screen.png'
 const Homepage = () => {
   return (
     <>
-      <header className="h-screen w-full bg-hero-bg bg-black bg-center bg-cover  bg-no-repeat flex flex-col items-center justify-center gap-5">
+      <header className="h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]  w-full bg-hero-bg bg-black bg-center bg-cover  bg-no-repeat flex flex-col items-center justify-center gap-5">
         <div className="flex flex-col gap-6 justify-center items-center w-full">
           <form className="bg-white p-2 rounded-xl flex gap-2">
             <input
@@ -46,64 +52,64 @@ const Homepage = () => {
             text={'Request Pick Up/Delivery and Xpress Drop-off'}
           />
           <Card
-            icon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-12 h-12"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                />
-              </svg>
+            icon={<BsGlobe className="w-12 h-12" />}
+            title={'Overseas Shipping'}
+            text={
+              'Ship from UK/USA to Nigeria & Export to 230 plus locations worldwide'
             }
-            title={'Ship Now'}
-            text={'Request Pick Up/Delivery and Xpress Drop-off'}
           />
           <Card
-            icon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-12 h-12"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                />
-              </svg>
-            }
-            title={'Ship Now'}
-            text={'Request Pick Up/Delivery and Xpress Drop-off'}
+            icon={<MdOutlineEventNote className="w-12 h-12" />}
+            title={' Get a Quick Quote'}
+            text={'Calculate cost estimate for local & internatioal shipments'}
           />
           <Card
-            icon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-12 h-12"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                />
-              </svg>
-            }
-            title={'Ship Now'}
-            text={'Request Pick Up/Delivery and Xpress Drop-off'}
+            icon={<BsCart4 className="w-12 h-12" />}
+            title={'Personal Shopper'}
+            text={'We shop quality products for you & ship to your doorsteps'}
+          />
+        </div>
+      </section>
+
+      <section className="grid md:grid-cols-2 w-full bg-slate-900 items-center gap-10 py-24 px-10">
+        <div className="flex flex-col items-start justify-center gap-9">
+          <h2 className="text-white md:text-4xl font-semibold">
+            Raven Logistics, the for local and international shipping
+          </h2>
+          <div className="flex w-full gap-4">
+            <Link
+              to="#"
+              className="flex justify-start items-center gap-2 px-1 py-1  text-white flex-1 bg-red-600 rounded-lg"
+            >
+              <AiFillApple className="text-white text-4xl" />
+              <div className="flex flex-col">
+                <span className="text-xs md:text-sm leading-tight">
+                  Download on the
+                </span>
+                <span className="text-sm md:text-lg font-semibold">
+                  App Store
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="#"
+              className="flex justify-start items-center gap-2 p-2 text-slate-950 flex-1 bg-white rounded-lg"
+            >
+              <AiFillAndroid className="text-slate-950 text-4xl" />
+              <div className="flex flex-col">
+                <span className="text-sm">Get it on</span>
+                <span className="text-lg font-semibold">Google play</span>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="bg-slate-900 flex items-center justify-center">
+          <img
+            src={appScreen}
+            className="h-80 w-80"
+            alt=""
+            width={100}
+            height={100}
           />
         </div>
       </section>
