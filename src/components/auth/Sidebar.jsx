@@ -17,7 +17,7 @@ const Sidebar = () => {
         <BiSolidTachometer /> Dashboard
       </Link>
       <Link
-        to="/auth/create-parce"
+        to="/auth/create-parcel"
         className="w-full py-1 px-2 rounded flex items-center gap-2 text-lg hover:text-white font-mono hover:bg-slate-900"
       >
         <MdCreate /> Create Parcel
