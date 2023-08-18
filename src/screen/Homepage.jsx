@@ -1,6 +1,8 @@
 import { BsGlobe, BsCart4 } from 'react-icons/bs'
-import { MdOutlineEventNote } from 'react-icons/md'
+import { MdOutlineEventNote, MdIndeterminateCheckBox } from 'react-icons/md'
 import { AiFillApple, AiFillAndroid } from 'react-icons/ai'
+import { SiCommerzbank } from 'react-icons/si'
+import { BiSolidTimeFive } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
 import Card from './../components/Homepage/Card'
@@ -111,6 +113,50 @@ const Homepage = () => {
             width={100}
             height={100}
           />
+        </div>
+      </section>
+
+      <section className="w-full bg-slate-50 px-10 py-20 flex flex-col gap-12">
+        <h2 className="text-4xl font-semibold">
+          We take the <br />{' '}
+          <span className="text-red-500">burden of logistics off you</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="flex flex-col gap-4">
+            <MdIndeterminateCheckBox className="text-4xl" />
+            <h4 className="text-xl font-bold">Latest Technology</h4>
+            <p>
+              Technology and its application are fundamental at GIGL. We
+              understand the role of technology in providing an exceptional
+              customer experience. For this reason, our processes, products and
+              services are built around modern technology to help us deliver
+              your shipments cheaper, safely and at the speed of light.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <SiCommerzbank className="text-4xl" />
+            <h4 className="text-xl font-bold">Social Commerce</h4>
+            <p>
+              Pivotal to successful social commerce transactions is the ability
+              for the end-user to receive items where and when needed. With an
+              unmatched route network spanning urban and rural communalities,
+              GIGL is the solution to efficient last-mile delivery. As a
+              merchant, you only have to think about selling your products while
+              GIGL delivers to your customers worldwide.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <BiSolidTimeFive className="text-4xl" />
+            <h4 className="text-xl font-bold">Guaranteed Delivery</h4>
+            <p>
+              We are conscious of the relationship between time and money and
+              utilize our resources optimally to meet your delivery needs. Our
+              service commitment to you is hassle-free delivery. We are large
+              enough to efficiently handle deliveries for large corporations yet
+              small enough to deploy innovative delivery solutions that help
+              small businesses.
+            </p>
+          </div>
         </div>
       </section>
     </>
