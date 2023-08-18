@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AiOutlineUser } from 'react-icons/ai'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { GrClose } from 'react-icons/gr'
 import logo from './../assets/gig-logo.png'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
+  const [user, setUser] = useState(true)
+
   const links = [
     { link: '/', label: 'Home' },
     { link: '/about', label: 'About' },
@@ -30,59 +35,46 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <Link
-          to="/login"
-          className="hidden md:block bg-red-600 text-white px-4 py-2 rounded-lg outline:none font-thin hover:shadow-lg"
-        >
-          Sign In/Sign Up
-        </Link>
+        {user ? (
+          <Link
+            to="/auth/profile"
+            className="hidden md:flex items-center gap-2 bg-slate-200 text-slate-800 px-4 py-2 rounded-lg outline:none font-thin hover:shadow-lg "
+          >
+            Jude Beling
+            <AiOutlineUser />
+          </Link>
+        ) : (
+          <Link
+            to="/login"
+            className="hidden md:block bg-red-600 text-white px-4 py-2 rounded-lg outline:none font-thin hover:shadow-lg"
+          >
+            Sign In/Sign Up
+          </Link>
+        )}
 
         {!open ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
+          <GiHamburgerMenu
             className="w-8 h-8 md:hidden cursor-pointer"
             onClick={() => setOpen(!open)}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          />
         ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-8 h-8"
-            onClick={() => setOpen(!open)}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          <GrClose className="w-8 h-8" onClick={() => setOpen(!open)} />
         )}
       </nav>
 
       {open && (
         <div className="flex flex-col h-screen w-1/2 bg-slate-100 drop-shadow-sm gap-3 pl-8 pt-4 z-10 absolute top-16">
           {links.map((link) => (
-            <Link
-              key={link.link}
-              onClick={() => setOpen(!open)}
-              className="hover:text-red-700"
-              to={link.link}
-            >
-              {link.label}
-            </Link>
+            <>
+              <Link
+                key={link.link}
+                onClick={() => setOpen(!open)}
+                className="hover:text-red-700"
+                to={link.link}
+              >
+                {link.label}
+              </Link>
+            </>
           ))}
         </div>
       )}

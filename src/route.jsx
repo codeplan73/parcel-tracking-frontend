@@ -10,6 +10,8 @@ import {
   Register,
 } from './screen/'
 
+import { Dashboard, Profile, CreateParcel } from './screen/auth'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -22,6 +24,9 @@ const router = createBrowserRouter([
       { path: '/track-parcel', element: <TrackParcel /> },
       { path: '/login', element: <Login /> },
       { path: '/register', element: <Register /> },
+      { path: '/auth/dashboard', element: <Dashboard /> },
+      { path: '/auth/create-parcel', element: <CreateParcel /> },
+      { path: '/auth/profile', element: <Profile /> },
     ],
   },
 ])
