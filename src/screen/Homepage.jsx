@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom'
 
 import Card from './../components/Homepage/Card'
 import appScreen from '../assets/gig-app-screen.png'
+import Notification from '../components/Notification'
 const Homepage = () => {
   return (
     <>
+      <Notification />
       <header className="h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]  w-full bg-hero-bg bg-black bg-center bg-cover  bg-no-repeat flex flex-col items-center justify-center gap-5">
         <div className="flex flex-col gap-6 justify-center items-center w-full">
           <form className="bg-white p-2 rounded-xl flex gap-2">
