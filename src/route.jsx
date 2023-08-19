@@ -10,7 +10,7 @@ import {
   Register,
 } from './screen/'
 
-import { Dashboard, Profile, CreateParcel } from './screen/auth'
+import { Dashboard, Profile, CreateParcel, Parcel } from './screen/auth'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
       { path: '/register', element: <Register /> },
       { path: '/auth/dashboard', element: <Dashboard /> },
       { path: '/auth/create-parcel', element: <CreateParcel /> },
+      { path: '/auth/parcels', element: <Parcel /> },
       { path: '/auth/profile', element: <Profile /> },
     ],
   },
